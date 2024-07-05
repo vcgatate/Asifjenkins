@@ -2,7 +2,7 @@ import requests
 
 def get_jenkins_build_number(job_name, build_id):
     # Replace with your Jenkins URL
-    jenkins_url = 'http://your-jenkins-server-url/'
+    jenkins_url = 'http://13.233.29.101:8080'
 
     # Jenkins API endpoint to get build information
     api_url = f'{jenkins_url}/job/{job_name}/{build_id}/api/json'
@@ -28,8 +28,8 @@ def get_jenkins_build_number(job_name, build_id):
 
 # Example usage:
 if __name__ == "__main__":
-    job_name = 'your-job-name'
-    build_id = 'your-build-id'  # This can be 'lastBuild', 'lastCompletedBuild', etc.
+    job_name = 'monitoring'
+    build_id = '7'  # This can be 'lastBuild', 'lastCompletedBuild', etc.
     build_number = get_jenkins_build_number(job_name, build_id)
     
     if build_number:
